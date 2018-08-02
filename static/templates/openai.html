@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<a href="index.html">
+<div class="left aligned">
+  <button id="home-button" class="ui labeled icon button">
+    <i class="left arrow icon"></i>
+    Back
+  </button>
+</div>
+</a>
+<div class="ui text container">
+<div class='ui center aligned grid'>
+<div class='row'>
+<div class='left aligned column'>
+<p><center></p>
+
+<h1>Algorithm Analysis with OpenAI Gym Games</h1>
+
+<p></center></p>
+
+<hr />
+
+<p><strong>About</strong>: I created this project with partners (Sam Oh, Brandon Hills) for my Artificial Intelligence class. We calculated optimal solutions for three games provided in the <a href="http://github.com/openai/gym/tree/master/gym/envs">OpenAI Gym Environments</a> (Taxi, Frozen Lakes, N-Chain) and used these solutions as a baseline for testing the effectiveness of tabular Q-learning on these games. Taxi is a game where a taxi spawns randomly on a 5x5 grid, as well as a pick-up and drop-off point. The player must go to the pick-up location to get a passenger, and then drop them off at the drop-off point. Frozen Lake comes in two forms: a 4x4 grid and an 8x8 grid, where there are frozen locations and holes. The player must move from the top left corner to the bottom right corner, without falling into a hole (in which case they lose). However, each time a player moves in a direction, they have a one-third probability of going in that direction, and a one-third probability of going in the two adjacent directions each. N-Chain is a game where you can go forward one step or back to the beginning of the chain. Going backward gives a small reward, while going forward gives no reward unless you are at the end of the chain, in which you gain a large reward. However, there is a twenty percent chance that you take the opposite action you choose.</p>
+
+<center>
+  <div class="ui video" data-source="youtube" data-id="udeiH0Kzl3A"></div>
+
+<p><em>Above: visualization of some of our agents.</em> </center></p>
+
+<p><strong>Implementation</strong>: The entire project was written using Python 2.7. We modelled Taxi as a search problem, and used A* search to find the optimal policy. Frozen Lakes and N-Chain are stochastic games, so we modelled them as Markov Decision Processes (MDPs) and used value iteration to create optimal policies for them. For all of the games, we created a tabular Q-learning agent. For Taxi and Frozen Lakes, we also created an "Incentivized" Q-Learning agent, which is given extra rewards for moving closer to a goal state as well as penalties for moving farther from a goal state. After tuning hyperparameters, we created test files for each of the three games to test the performance of our reinforcement learning algorithms with varying training iterations. Performance of these algorithms compared to optimal policies can be seen in the graphs below:</p>
+
+<p><center>
+  <div class="ui large images">
+  <img src="static/img/openai/taxigraph.jpg"></img>
+  <img src="static/img/openai/frozen4graph.jpg"></img>
+  <img src="static/img/openai/frozen8graph.jpg"></img>
+  <img src="static/img/openai/nchaingraph.jpg"></img>
+  </div>
+
+<p><em>Above: collected data from our test files.</em></center></p>
+
+<p><strong>Visualization</strong>: The games that we worked on did not come with a graphical display. So, I created a GUI for each of the games, which is demonstrated in the walkthrough video at the top of the page. The GUI can be run from the graphics.py file, which allows you to choose which game to display, which agent to use, how many games to simulate, and how many training iterations a Q-learning agent should take.</p>
+
+<p><strong>Code</strong>: can be found <a href="http://github.com/coprice/OpenAI-Gym-Games">Here</a>.</p>
+
+<center>
+<a href="http://www.facebook.com/collin.price.583">
+  <button class="ui facebook button">
+    <i class="facebook icon"></i>
+    Facebook
+  </button>
+</a>
+<a href="http://www.linkedin.com/in/collin-price-106234123">
+  <button class="ui linkedin button">
+    <i class="linkedin icon"></i>
+    LinkedIn
+  </button>
+</a>
+<a href="https://github.com/coprice">
+  <button class="ui github button">
+    <i class="github icon"></i>
+    GitHub
+  </button>
+</a>
+</center>
+
+</div>
+</div>
+</div>
+</div>
+{% endblock %}

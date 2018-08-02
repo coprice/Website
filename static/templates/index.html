@@ -1,0 +1,134 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<div class='ui text container'>
+
+{% if message %}
+  {% if error %}
+  <div class="ui red message">{{message}}</div>
+  {% else %}
+  <div class="ui green message">{{message}}</div>
+  {% endif %}
+{% endif %}
+
+<h1 id="title-header">
+	Collin Price
+</h1>
+<br>
+<img src="static/img/cover.png" class="ui centered big image"></img>
+<br>
+
+<br>
+<div>
+	<h2>Projects</h2>
+</div>
+<hr>
+<div class="ui container">
+	<div class="ui center aligned grid" id="articles-grid">
+		<div class="row">
+			<div class="column">
+				<div class="ui three stackable link cards">
+
+<div class="ui card project-card" href="/climb">
+  <div class="image">
+    <img src="static/img/climb/icon.png" class="article-img">
+  </div>
+  <div class="content">
+    <div class="header">Climb</div>
+    <div class="meta">
+      <span class="date">iOS App</span>
+    </div>
+  </div>
+</div>
+
+<div class="ui card project-card" href="/openai">
+  <div class="image">
+    <img src="static/img/openai/gym.png" class="article-img">
+  </div>
+  <div class="content">
+    <div class="header">Q-Learning Analysis</div>
+    <div class="meta">
+      <span class="date">OpenAI Gym Environments</span>
+    </div>
+  </div>
+</div>
+
+<div class="ui card project-card" href="/frogger">
+  <div class="image">
+    <img src="static/img/frogger/icon.png" class="article-img">
+  </div>
+  <div class="content">
+    <div class="header">Frogger</div>
+    <div class="meta">
+      <span class="date">Tkinter GUI</span>
+    </div>
+  </div>
+</div>
+
+<div class="ui card project-card" href="/contact">
+  <div class="image">
+    <img src="static/img/contact.png" class="article-img">
+  </div>
+  <div class="content">
+    <div class="header">Contact</div>
+    <div class="meta">
+      <span class="date">&nbsp;</span>
+    </div>
+  </div>
+</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div>
+	<h2>About</h2>
+</div>
+<hr>
+<img src="static/img/collin.png" class="ui medium right spaced floated image transition visible"></img>
+<p align="left"><b>Who
+</b></p>
+<p align="justify" class="indented">
+  Collin Price is a 21-year old undergraduate student at Harvard University,
+  originally from San Juan Capistrano, California. He is currently a Junior
+  concentrating in Computer Science with a Secondary in Economics. Collin is
+  also a distance runner on Harvard's Varsity Cross Country and Track Teams.
+</p>
+<p align="left"><b>Skills
+</b></p>
+<ul align="left">
+  <li>Languages: Python, Swift, OCaml, C</li>
+  <li>iOS: SpriteKit, UIKit, FacebookSDK, GoogleMobileAds</li>
+  <li>Web: HTML, CSS, JavaScript</li>
+</ul>
+<p align="left"><b>Interests
+</b></p>
+<ul align="left">
+  <li>Sports: Running, Basketball, Football (American)</li>
+  <li>Culinary Aspirations: To one day be one eighth as good a chef as Gordon Ramsay</li>
+</ul>
+<a href="http://www.facebook.com/collin.price.583">
+  <button class="ui facebook button">
+    <i class="facebook icon"></i>
+    Facebook
+  </button>
+</a>
+<a href="http://www.linkedin.com/in/collin-price-106234123">
+  <button class="ui linkedin button">
+    <i class="linkedin icon"></i>
+    LinkedIn
+  </button>
+</a>
+<a href="https://github.com/coprice">
+  <button class="ui github button">
+    <i class="github icon"></i>
+    GitHub
+  </button>
+</a>
+<br><br>
+
+</div>
+{% endblock %}

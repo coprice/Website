@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<a href="index.html">
+<div class="left aligned">
+  <button id="home-button" class="ui labeled icon button">
+    <i class="left arrow icon"></i>
+    Back
+  </button>
+</div>
+</a>
+<div class="ui text container">
+<div class='ui center aligned grid'>
+<div class='row'>
+<div class='left aligned column'>
+
+<center><h1>Climb</h1></center>
+
+<hr>
+
+<p><strong>About</strong>: Climb is a video game available on the <a href="https://itunes.apple.com/us/app/climb-platforms/id1250427510?ls=1&amp;mt=8">app store</a>. You are a little ball whose single objective in life is to fly into as many platforms as possible. Survival is easy, at first. Over time, you become more excited about your platform friends and begin to climb faster and faster, while the platforms grow smaller. All the while, you must avoid your spikeball brethren who want nothing more than to stop your glorious ascension. Additionally, you can collect coins to upgrade the color of your circular body as well as your spikeball kin.</p>
+
+<center>
+  <div class="ui video" data-source="youtube" data-id="9hpqNn3i9Hk"></div>
+
+<p><em>Above: example game-play, including a sneak peak of the shop menu.</em> </center></p>
+
+<p><strong>Implementation</strong>: All front-end features are written in Swift. Users in the game can log in with Facebook to challenge their friends in global leaderboards. User data is saved in my own database system (implemented with MongoDB). The app also contains in-app purchases and Google ads.</p>
+
+<center>
+  <div class="ui medium images">
+  <img src="static/img/climb/menu.png"></img>
+  <img src="static/img/climb/gameplay.png"></img>
+  <img src="static/img/climb/shop.png"></img>
+  <img src="static/img/climb/leaderboard.png"></img>
+  </div>
+  <p><em>Above: game-play, menu, shop, and leaderboard screenshots.</em></p>
+</center>
+
+<p><strong>Code</strong>: can be found <a href="https://github.com/coprice/climb">Here</a>.</p>
+
+<center>
+<a href="http://www.facebook.com/collin.price.583">
+  <button class="ui facebook button">
+    <i class="facebook icon"></i>
+    Facebook
+  </button>
+</a>
+<a href="http://www.linkedin.com/in/collin-price-106234123">
+  <button class="ui linkedin button">
+    <i class="linkedin icon"></i>
+    LinkedIn
+  </button>
+</a>
+<a href="https://github.com/coprice">
+  <button class="ui github button">
+    <i class="github icon"></i>
+    GitHub
+  </button>
+</a>
+</center>
+
+</div>
+</div>
+</div>
+</div>
+{% endblock %}
