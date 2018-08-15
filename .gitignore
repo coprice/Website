@@ -3,3 +3,4 @@ __pycache__/
 Portfolio
 *client_secret.json
 *.pyc
+static/semantic
